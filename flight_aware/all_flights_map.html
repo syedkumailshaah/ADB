@@ -1,0 +1,1021 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_7af30c9b9dcef1497ae8fc4c429bc27a {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_7af30c9b9dcef1497ae8fc4c429bc27a" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_7af30c9b9dcef1497ae8fc4c429bc27a = L.map(
+                "map_7af30c9b9dcef1497ae8fc4c429bc27a",
+                {
+                    center: [24.902128678955552, 67.03355818233992],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 5,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_d8ec19a2c2bc48af95ebc398cc98b69d = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_d8ec19a2c2bc48af95ebc398cc98b69d.addTo(map_7af30c9b9dcef1497ae8fc4c429bc27a);
+        
+    
+            var poly_line_176031212ca6cec3de6ca4ee2626e8c4 = L.polyline(
+                [[33.65260279456022, 73.09091440716712], [32.880848694339, 72.49143584276564], [32.116019694180174, 71.92811873852546], [31.29894603815861, 71.40520670238448], [30.48354161454623, 70.86946658258395], [29.632629779607782, 70.32048926672893], [28.91085704480453, 69.74640258976261], [28.096766733448437, 69.24283335855002], [27.223279105109434, 68.64965781777356], [26.429318037030086, 68.10904095867971], [25.662797864954776, 67.59703284847276], [24.902128678955552, 67.03355818233992]],
+                {"bubblingMouseEvents": true, "color": "#8ccc3b", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#8ccc3b", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_7af30c9b9dcef1497ae8fc4c429bc27a);
+        
+    
+            poly_line_176031212ca6cec3de6ca4ee2626e8c4.bindTooltip(
+                `<div>
+                     Flight PK300
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_5cb08d6935386bfc0f864766cafc4cd4 = L.marker(
+                [33.65260279456022, 73.09091440716712],
+                {
+}
+            ).addTo(map_7af30c9b9dcef1497ae8fc4c429bc27a);
+        
+    
+            var icon_5b9c0085e868f2da89c76e25fe2673e7 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "plane",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2f05b020d03f3b0ba1f96cde389a3d01 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_eff0736b04f2140f3eae89bef409bf59 = $(`<div id="html_eff0736b04f2140f3eae89bef409bf59" style="width: 100.0%; height: 100.0%;">🛫 PK300 (Start)</div>`)[0];
+                popup_2f05b020d03f3b0ba1f96cde389a3d01.setContent(html_eff0736b04f2140f3eae89bef409bf59);
+            
+        
+
+        marker_5cb08d6935386bfc0f864766cafc4cd4.bindPopup(popup_2f05b020d03f3b0ba1f96cde389a3d01)
+        ;
+
+        
+    
+    
+                marker_5cb08d6935386bfc0f864766cafc4cd4.setIcon(icon_5b9c0085e868f2da89c76e25fe2673e7);
+            
+    
+            var marker_f0608ca22fa4404b303ef003a0a13f55 = L.marker(
+                [24.902128678955552, 67.03355818233992],
+                {
+}
+            ).addTo(map_7af30c9b9dcef1497ae8fc4c429bc27a);
+        
+    
+            var icon_e4d6c0175a87592eae92f2834bdfc565 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "flag",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_dba7c9e9c38543943192ae298356090f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0d24380718dbf5de8609dc260914755f = $(`<div id="html_0d24380718dbf5de8609dc260914755f" style="width: 100.0%; height: 100.0%;">🏁 PK300 (End)</div>`)[0];
+                popup_dba7c9e9c38543943192ae298356090f.setContent(html_0d24380718dbf5de8609dc260914755f);
+            
+        
+
+        marker_f0608ca22fa4404b303ef003a0a13f55.bindPopup(popup_dba7c9e9c38543943192ae298356090f)
+        ;
+
+        
+    
+    
+                marker_f0608ca22fa4404b303ef003a0a13f55.setIcon(icon_e4d6c0175a87592eae92f2834bdfc565);
+            
+    
+            var poly_line_d199dd84e9191a16517baeb751de6946 = L.polyline(
+                [[31.476356342078397, 74.40222431622632], [30.904664479119084, 73.71080594320784], [30.341923697434115, 73.02488155711995], [29.750270586757985, 72.34591685316634], [29.139335716153038, 71.71829136794078], [28.542855030295573, 71.01997177687288], [27.90966042296852, 70.38433173455984], [27.24190238141808, 69.63196681916885], [26.63855890698533, 68.99768623692367], [26.088237525600153, 68.34951320432502], [25.5090335247069, 67.66369321963742], [24.838959288349404, 67.03661789940418]],
+                {"bubblingMouseEvents": true, "color": "#528cf2", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#528cf2", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_7af30c9b9dcef1497ae8fc4c429bc27a);
+        
+    
+            poly_line_d199dd84e9191a16517baeb751de6946.bindTooltip(
+                `<div>
+                     Flight PK301
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_36e0558439d00dce5e72fbbaadc797cd = L.marker(
+                [31.476356342078397, 74.40222431622632],
+                {
+}
+            ).addTo(map_7af30c9b9dcef1497ae8fc4c429bc27a);
+        
+    
+            var icon_bf67dea8cdbc55272d8dbc01f78c00a3 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "plane",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_355a9a716d36516bc7e87fcc630c6675 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9d96cf430dcb62d8dfc4d080bcf67d84 = $(`<div id="html_9d96cf430dcb62d8dfc4d080bcf67d84" style="width: 100.0%; height: 100.0%;">🛫 PK301 (Start)</div>`)[0];
+                popup_355a9a716d36516bc7e87fcc630c6675.setContent(html_9d96cf430dcb62d8dfc4d080bcf67d84);
+            
+        
+
+        marker_36e0558439d00dce5e72fbbaadc797cd.bindPopup(popup_355a9a716d36516bc7e87fcc630c6675)
+        ;
+
+        
+    
+    
+                marker_36e0558439d00dce5e72fbbaadc797cd.setIcon(icon_bf67dea8cdbc55272d8dbc01f78c00a3);
+            
+    
+            var marker_5aee48edf0c36042cefa13efa3669be2 = L.marker(
+                [24.838959288349404, 67.03661789940418],
+                {
+}
+            ).addTo(map_7af30c9b9dcef1497ae8fc4c429bc27a);
+        
+    
+            var icon_324e5e883da3c4c2332f074f4a958522 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "flag",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_31bd8cafc2546c83541a9cabd7151d39 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9cff71bf5c799940cf08430993ee29ca = $(`<div id="html_9cff71bf5c799940cf08430993ee29ca" style="width: 100.0%; height: 100.0%;">🏁 PK301 (End)</div>`)[0];
+                popup_31bd8cafc2546c83541a9cabd7151d39.setContent(html_9cff71bf5c799940cf08430993ee29ca);
+            
+        
+
+        marker_5aee48edf0c36042cefa13efa3669be2.bindPopup(popup_31bd8cafc2546c83541a9cabd7151d39)
+        ;
+
+        
+    
+    
+                marker_5aee48edf0c36042cefa13efa3669be2.setIcon(icon_324e5e883da3c4c2332f074f4a958522);
+            
+    
+            var poly_line_9fa0d85e7a6a9882a85acd8a5543f055 = L.polyline(
+                [[31.479922089733382, 74.31445264767164], [30.916190939512074, 73.71255273927389], [30.266807136432035, 72.9995560026886], [29.71419029074545, 72.3030712366083], [29.06812254709887, 71.65142316202993], [28.469207704912435, 70.98011790321519], [27.851768842902533, 70.29591317971543], [27.26653034229411, 69.66149857229023], [26.630729921614194, 69.0471361330597], [26.1126592871313, 68.32712578396657], [25.514984907162066, 67.71343431820182], [24.823018495089965, 67.01423852419063]],
+                {"bubblingMouseEvents": true, "color": "#5a8059", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#5a8059", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_7af30c9b9dcef1497ae8fc4c429bc27a);
+        
+    
+            poly_line_9fa0d85e7a6a9882a85acd8a5543f055.bindTooltip(
+                `<div>
+                     Flight PK302
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_108f6eacc54b097bfc496a62b5ab65c0 = L.marker(
+                [31.479922089733382, 74.31445264767164],
+                {
+}
+            ).addTo(map_7af30c9b9dcef1497ae8fc4c429bc27a);
+        
+    
+            var icon_fe685908a8d8bd4dbfa1813169622ecf = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "plane",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_62d06cd2bf228e059c5e74944f6e8f2b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_af79ae1c75e47a5ec0446158b7ff2115 = $(`<div id="html_af79ae1c75e47a5ec0446158b7ff2115" style="width: 100.0%; height: 100.0%;">🛫 PK302 (Start)</div>`)[0];
+                popup_62d06cd2bf228e059c5e74944f6e8f2b.setContent(html_af79ae1c75e47a5ec0446158b7ff2115);
+            
+        
+
+        marker_108f6eacc54b097bfc496a62b5ab65c0.bindPopup(popup_62d06cd2bf228e059c5e74944f6e8f2b)
+        ;
+
+        
+    
+    
+                marker_108f6eacc54b097bfc496a62b5ab65c0.setIcon(icon_fe685908a8d8bd4dbfa1813169622ecf);
+            
+    
+            var marker_8ed34853087ada9e38e12c6231e37f0b = L.marker(
+                [24.823018495089965, 67.01423852419063],
+                {
+}
+            ).addTo(map_7af30c9b9dcef1497ae8fc4c429bc27a);
+        
+    
+            var icon_598c2b3ad8c3c0d2d0d9a4b2335cd217 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "flag",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f19229e38e63c9020c379946310451cb = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3e827434ac3a5ca56ba57b8f4a361a2e = $(`<div id="html_3e827434ac3a5ca56ba57b8f4a361a2e" style="width: 100.0%; height: 100.0%;">🏁 PK302 (End)</div>`)[0];
+                popup_f19229e38e63c9020c379946310451cb.setContent(html_3e827434ac3a5ca56ba57b8f4a361a2e);
+            
+        
+
+        marker_8ed34853087ada9e38e12c6231e37f0b.bindPopup(popup_f19229e38e63c9020c379946310451cb)
+        ;
+
+        
+    
+    
+                marker_8ed34853087ada9e38e12c6231e37f0b.setIcon(icon_598c2b3ad8c3c0d2d0d9a4b2335cd217);
+            
+    
+            var poly_line_e80780a5956366dadc099979049685de = L.polyline(
+                [[33.98680660250604, 71.4892960304223], [33.182172207031854, 71.10564633471273], [32.36881668578022, 70.70315323759509], [31.534860899954804, 70.26099902196795], [30.73406275489244, 69.91868713070433], [29.902167508516023, 69.45498031378996], [29.04259346282875, 69.029034466507], [28.140306307633033, 68.63588848359771], [27.398472277040852, 68.24548826573414], [26.526673941102796, 67.83929607284708], [25.68659976545205, 67.39324819835213], [24.842143088144386, 66.99317176431981]],
+                {"bubblingMouseEvents": true, "color": "#ea9ca6", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#ea9ca6", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_7af30c9b9dcef1497ae8fc4c429bc27a);
+        
+    
+            poly_line_e80780a5956366dadc099979049685de.bindTooltip(
+                `<div>
+                     Flight PK303
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_c8ed38023b53c48e77fe9964462486ac = L.marker(
+                [33.98680660250604, 71.4892960304223],
+                {
+}
+            ).addTo(map_7af30c9b9dcef1497ae8fc4c429bc27a);
+        
+    
+            var icon_f2fe9efe8f20b531c574484b3f542d95 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "plane",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f12e8b893976c763a9aaa21f32f748be = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6f873a3a9cd308cb0908a28b475042b8 = $(`<div id="html_6f873a3a9cd308cb0908a28b475042b8" style="width: 100.0%; height: 100.0%;">🛫 PK303 (Start)</div>`)[0];
+                popup_f12e8b893976c763a9aaa21f32f748be.setContent(html_6f873a3a9cd308cb0908a28b475042b8);
+            
+        
+
+        marker_c8ed38023b53c48e77fe9964462486ac.bindPopup(popup_f12e8b893976c763a9aaa21f32f748be)
+        ;
+
+        
+    
+    
+                marker_c8ed38023b53c48e77fe9964462486ac.setIcon(icon_f2fe9efe8f20b531c574484b3f542d95);
+            
+    
+            var marker_cb6aac1ae5e568206569e89e744044bf = L.marker(
+                [24.842143088144386, 66.99317176431981],
+                {
+}
+            ).addTo(map_7af30c9b9dcef1497ae8fc4c429bc27a);
+        
+    
+            var icon_7d1529c2697f0ffda5194846ced2b7ff = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "flag",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_56e879340a1c06adccd9dd465b7f8c75 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_afe5b6c466a230a8e4d84326c0bbc783 = $(`<div id="html_afe5b6c466a230a8e4d84326c0bbc783" style="width: 100.0%; height: 100.0%;">🏁 PK303 (End)</div>`)[0];
+                popup_56e879340a1c06adccd9dd465b7f8c75.setContent(html_afe5b6c466a230a8e4d84326c0bbc783);
+            
+        
+
+        marker_cb6aac1ae5e568206569e89e744044bf.bindPopup(popup_56e879340a1c06adccd9dd465b7f8c75)
+        ;
+
+        
+    
+    
+                marker_cb6aac1ae5e568206569e89e744044bf.setIcon(icon_7d1529c2697f0ffda5194846ced2b7ff);
+            
+    
+            var poly_line_e2a473266a494286267506ba2ee1e702 = L.polyline(
+                [[24.837625176890207, 67.03304003488222], [25.682490108536907, 67.41997940878974], [26.527229410854037, 67.83416873625492], [27.31913960037671, 68.23697223774026], [28.167729045187077, 68.64162610456121], [29.001247703604502, 69.03403450768207], [29.89739858860466, 69.51305071119661], [30.640862456949353, 69.89313635715561], [31.48734187423242, 70.3091793316414], [32.396648743513566, 70.73550997555665], [33.195442123780516, 71.14988845406958], [33.97431718712158, 71.53234633200009]],
+                {"bubblingMouseEvents": true, "color": "#38c009", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#38c009", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_7af30c9b9dcef1497ae8fc4c429bc27a);
+        
+    
+            poly_line_e2a473266a494286267506ba2ee1e702.bindTooltip(
+                `<div>
+                     Flight PK304
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_607bdcdc357338d48bfd68caef1ada98 = L.marker(
+                [24.837625176890207, 67.03304003488222],
+                {
+}
+            ).addTo(map_7af30c9b9dcef1497ae8fc4c429bc27a);
+        
+    
+            var icon_5bb369789d72fc726ddf63195d30b9d6 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "plane",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_13b37c629f4ae436ad2aaa8e01c4f9db = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1fc41d393f1ac02c17c19df31f6fc53d = $(`<div id="html_1fc41d393f1ac02c17c19df31f6fc53d" style="width: 100.0%; height: 100.0%;">🛫 PK304 (Start)</div>`)[0];
+                popup_13b37c629f4ae436ad2aaa8e01c4f9db.setContent(html_1fc41d393f1ac02c17c19df31f6fc53d);
+            
+        
+
+        marker_607bdcdc357338d48bfd68caef1ada98.bindPopup(popup_13b37c629f4ae436ad2aaa8e01c4f9db)
+        ;
+
+        
+    
+    
+                marker_607bdcdc357338d48bfd68caef1ada98.setIcon(icon_5bb369789d72fc726ddf63195d30b9d6);
+            
+    
+            var marker_ac3b692d1d2bfef73a6ff463cc36d7f6 = L.marker(
+                [33.97431718712158, 71.53234633200009],
+                {
+}
+            ).addTo(map_7af30c9b9dcef1497ae8fc4c429bc27a);
+        
+    
+            var icon_667bf83e19a5e4fb10c00fd2be893400 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "flag",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_0280db88eaf7c77bee8ff162dc87ffff = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_32ab6feb2cfa2823b4b5403b2ed9556a = $(`<div id="html_32ab6feb2cfa2823b4b5403b2ed9556a" style="width: 100.0%; height: 100.0%;">🏁 PK304 (End)</div>`)[0];
+                popup_0280db88eaf7c77bee8ff162dc87ffff.setContent(html_32ab6feb2cfa2823b4b5403b2ed9556a);
+            
+        
+
+        marker_ac3b692d1d2bfef73a6ff463cc36d7f6.bindPopup(popup_0280db88eaf7c77bee8ff162dc87ffff)
+        ;
+
+        
+    
+    
+                marker_ac3b692d1d2bfef73a6ff463cc36d7f6.setIcon(icon_667bf83e19a5e4fb10c00fd2be893400);
+            
+    
+            var poly_line_dd10d73c3c820309b58025399304c58f = L.polyline(
+                [[31.523399635947225, 74.37560050266265], [30.958484700583153, 73.66466992750377], [30.323683537938976, 73.04864576384189], [29.723034910625245, 72.33303784261251], [29.144063859706556, 71.68459075915497], [28.503437692407907, 70.99407318901355], [27.8587571364547, 70.33450524619187], [27.260535611717984, 69.7114544561665], [26.670620634524873, 68.97417746423741], [26.093798633826598, 68.3035780925443], [25.440470963801857, 67.70866139586437], [24.81747121955859, 66.9560429583309]],
+                {"bubblingMouseEvents": true, "color": "#c8667e", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#c8667e", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_7af30c9b9dcef1497ae8fc4c429bc27a);
+        
+    
+            poly_line_dd10d73c3c820309b58025399304c58f.bindTooltip(
+                `<div>
+                     Flight PK305
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_ba07fe2f5c92d396d26d131fe04796cc = L.marker(
+                [31.523399635947225, 74.37560050266265],
+                {
+}
+            ).addTo(map_7af30c9b9dcef1497ae8fc4c429bc27a);
+        
+    
+            var icon_077dc2305f124c705d5dc3e60e97601d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "plane",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_3e78a2a7faa75c400a247fe027a0cd35 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_47126deda57758c2a254f15b3978491a = $(`<div id="html_47126deda57758c2a254f15b3978491a" style="width: 100.0%; height: 100.0%;">🛫 PK305 (Start)</div>`)[0];
+                popup_3e78a2a7faa75c400a247fe027a0cd35.setContent(html_47126deda57758c2a254f15b3978491a);
+            
+        
+
+        marker_ba07fe2f5c92d396d26d131fe04796cc.bindPopup(popup_3e78a2a7faa75c400a247fe027a0cd35)
+        ;
+
+        
+    
+    
+                marker_ba07fe2f5c92d396d26d131fe04796cc.setIcon(icon_077dc2305f124c705d5dc3e60e97601d);
+            
+    
+            var marker_4efd15c697b5cdccdf19aa608a24a1a2 = L.marker(
+                [24.81747121955859, 66.9560429583309],
+                {
+}
+            ).addTo(map_7af30c9b9dcef1497ae8fc4c429bc27a);
+        
+    
+            var icon_48f4f3d67313f7525480392fed5be3a3 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "flag",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_640582398f7fb80b70be90a33bbaf595 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_09867c96aea81e3a7fc963e093b3c98d = $(`<div id="html_09867c96aea81e3a7fc963e093b3c98d" style="width: 100.0%; height: 100.0%;">🏁 PK305 (End)</div>`)[0];
+                popup_640582398f7fb80b70be90a33bbaf595.setContent(html_09867c96aea81e3a7fc963e093b3c98d);
+            
+        
+
+        marker_4efd15c697b5cdccdf19aa608a24a1a2.bindPopup(popup_640582398f7fb80b70be90a33bbaf595)
+        ;
+
+        
+    
+    
+                marker_4efd15c697b5cdccdf19aa608a24a1a2.setIcon(icon_48f4f3d67313f7525480392fed5be3a3);
+            
+    
+            var poly_line_188b047f67bfd9a9a2dc7718eb8f1750 = L.polyline(
+                [[34.04555219500415, 71.53623520095651], [33.22736740690865, 71.23410465305538], [32.39601106827429, 70.94105098463554], [31.662465128518924, 70.69109791429938], [30.914762676003356, 70.40084951632456], [30.059000610469994, 70.11054664431155], [29.321948302037615, 69.82368022103847], [28.532353038660233, 69.4774881495598], [27.732818371838302, 69.19490140908368], [26.908558186385594, 68.94103222203748], [26.18314891632847, 68.60656612870763], [25.34275179857116, 68.36129049807522]],
+                {"bubblingMouseEvents": true, "color": "#006290", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#006290", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_7af30c9b9dcef1497ae8fc4c429bc27a);
+        
+    
+            poly_line_188b047f67bfd9a9a2dc7718eb8f1750.bindTooltip(
+                `<div>
+                     Flight PK306
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_5c58d1b1b74421e07e59b7b2545d04b7 = L.marker(
+                [34.04555219500415, 71.53623520095651],
+                {
+}
+            ).addTo(map_7af30c9b9dcef1497ae8fc4c429bc27a);
+        
+    
+            var icon_1bf3924e6fcbff1f39e2b5257fd5a371 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "plane",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c49648f89bf638dcb214bbf351518f77 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0cdc134611c452b23e9aef4700c30d73 = $(`<div id="html_0cdc134611c452b23e9aef4700c30d73" style="width: 100.0%; height: 100.0%;">🛫 PK306 (Start)</div>`)[0];
+                popup_c49648f89bf638dcb214bbf351518f77.setContent(html_0cdc134611c452b23e9aef4700c30d73);
+            
+        
+
+        marker_5c58d1b1b74421e07e59b7b2545d04b7.bindPopup(popup_c49648f89bf638dcb214bbf351518f77)
+        ;
+
+        
+    
+    
+                marker_5c58d1b1b74421e07e59b7b2545d04b7.setIcon(icon_1bf3924e6fcbff1f39e2b5257fd5a371);
+            
+    
+            var marker_8ec9f5fc28a6e88d7cde0e1ab91257ac = L.marker(
+                [25.34275179857116, 68.36129049807522],
+                {
+}
+            ).addTo(map_7af30c9b9dcef1497ae8fc4c429bc27a);
+        
+    
+            var icon_9bf65934441e0341db9299da5d737e69 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "flag",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_8ee2b3fb924fccdc40de021212fe3ef0 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1273e35468bc6465329d8195a7d19eec = $(`<div id="html_1273e35468bc6465329d8195a7d19eec" style="width: 100.0%; height: 100.0%;">🏁 PK306 (End)</div>`)[0];
+                popup_8ee2b3fb924fccdc40de021212fe3ef0.setContent(html_1273e35468bc6465329d8195a7d19eec);
+            
+        
+
+        marker_8ec9f5fc28a6e88d7cde0e1ab91257ac.bindPopup(popup_8ee2b3fb924fccdc40de021212fe3ef0)
+        ;
+
+        
+    
+    
+                marker_8ec9f5fc28a6e88d7cde0e1ab91257ac.setIcon(icon_9bf65934441e0341db9299da5d737e69);
+            
+    
+            var poly_line_6d9b822280185eeee6df25113cdd49af = L.polyline(
+                [[33.72962072620824, 73.00796983858623], [33.71015916020794, 72.91801285787565], [33.77916739367059, 72.7587522470645], [33.77136647228453, 72.66039596337372], [33.820405677865985, 72.48876897584188], [33.88126807721028, 72.36173397497848], [33.85065073739712, 72.1848430611389], [33.94030335883173, 72.03276653115785], [33.8842434944447, 71.93863429383327], [33.99345393733347, 71.76085502181962], [33.977878961597554, 71.6929366778198], [34.02195450081939, 71.53504604444474]],
+                {"bubblingMouseEvents": true, "color": "#b4f8aa", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#b4f8aa", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_7af30c9b9dcef1497ae8fc4c429bc27a);
+        
+    
+            poly_line_6d9b822280185eeee6df25113cdd49af.bindTooltip(
+                `<div>
+                     Flight PK307
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_1968670c6ea39ee2300ad06587220075 = L.marker(
+                [33.72962072620824, 73.00796983858623],
+                {
+}
+            ).addTo(map_7af30c9b9dcef1497ae8fc4c429bc27a);
+        
+    
+            var icon_39bfc98a42a38a66ded69e79f895d82f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "plane",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d07b419271689b8e7e33638b264087db = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5e2a41970e69623c94e1bf9d15c0a0cf = $(`<div id="html_5e2a41970e69623c94e1bf9d15c0a0cf" style="width: 100.0%; height: 100.0%;">🛫 PK307 (Start)</div>`)[0];
+                popup_d07b419271689b8e7e33638b264087db.setContent(html_5e2a41970e69623c94e1bf9d15c0a0cf);
+            
+        
+
+        marker_1968670c6ea39ee2300ad06587220075.bindPopup(popup_d07b419271689b8e7e33638b264087db)
+        ;
+
+        
+    
+    
+                marker_1968670c6ea39ee2300ad06587220075.setIcon(icon_39bfc98a42a38a66ded69e79f895d82f);
+            
+    
+            var marker_7cb238c225ca1ff66389fdf09726b58d = L.marker(
+                [34.02195450081939, 71.53504604444474],
+                {
+}
+            ).addTo(map_7af30c9b9dcef1497ae8fc4c429bc27a);
+        
+    
+            var icon_264e82bcd6a40c85931d9ddd1bc361e1 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "flag",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_9596a91c7c54d7867d5dc3d902485b4a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9c5ef65994eb45281e8f053fca3ad0c4 = $(`<div id="html_9c5ef65994eb45281e8f053fca3ad0c4" style="width: 100.0%; height: 100.0%;">🏁 PK307 (End)</div>`)[0];
+                popup_9596a91c7c54d7867d5dc3d902485b4a.setContent(html_9c5ef65994eb45281e8f053fca3ad0c4);
+            
+        
+
+        marker_7cb238c225ca1ff66389fdf09726b58d.bindPopup(popup_9596a91c7c54d7867d5dc3d902485b4a)
+        ;
+
+        
+    
+    
+                marker_7cb238c225ca1ff66389fdf09726b58d.setIcon(icon_264e82bcd6a40c85931d9ddd1bc361e1);
+            
+    
+            var poly_line_8968fd184e90d82663324c8a62465df2 = L.polyline(
+                [[34.06255807605171, 71.54694957237547], [33.237845635819895, 71.26465516101074], [32.444728852320004, 70.99506179370648], [31.674604250145194, 70.68868142793137], [30.86979724164909, 70.38902750843657], [30.07769908982954, 70.0738747834427], [29.311629696914235, 69.79699722996487], [28.543241707132037, 69.50081924973131], [27.697770483813038, 69.2508964060995], [26.917178002025484, 68.90202281313938], [26.16994021364168, 68.68684950094725], [25.39726850613939, 68.40747203983845]],
+                {"bubblingMouseEvents": true, "color": "#30e00b", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#30e00b", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_7af30c9b9dcef1497ae8fc4c429bc27a);
+        
+    
+            poly_line_8968fd184e90d82663324c8a62465df2.bindTooltip(
+                `<div>
+                     Flight PK308
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_23a743516e8f5a23234d78d89584e24f = L.marker(
+                [34.06255807605171, 71.54694957237547],
+                {
+}
+            ).addTo(map_7af30c9b9dcef1497ae8fc4c429bc27a);
+        
+    
+            var icon_406085a12a18f32e7b62464394d7ceb0 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "plane",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ceb84ea1c0331deedb0ff0ed971d502a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0723851f601d0f6aac9ee3ab2c1692e9 = $(`<div id="html_0723851f601d0f6aac9ee3ab2c1692e9" style="width: 100.0%; height: 100.0%;">🛫 PK308 (Start)</div>`)[0];
+                popup_ceb84ea1c0331deedb0ff0ed971d502a.setContent(html_0723851f601d0f6aac9ee3ab2c1692e9);
+            
+        
+
+        marker_23a743516e8f5a23234d78d89584e24f.bindPopup(popup_ceb84ea1c0331deedb0ff0ed971d502a)
+        ;
+
+        
+    
+    
+                marker_23a743516e8f5a23234d78d89584e24f.setIcon(icon_406085a12a18f32e7b62464394d7ceb0);
+            
+    
+            var marker_cdb22b12912c0abf2681cb90dcb831a4 = L.marker(
+                [25.39726850613939, 68.40747203983845],
+                {
+}
+            ).addTo(map_7af30c9b9dcef1497ae8fc4c429bc27a);
+        
+    
+            var icon_b7e02350011bb8bf523c696307c51ae0 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "flag",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_94b0a76b3690813c5663853217ac9527 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f0e5a96542f1f67210850e079a57ed18 = $(`<div id="html_f0e5a96542f1f67210850e079a57ed18" style="width: 100.0%; height: 100.0%;">🏁 PK308 (End)</div>`)[0];
+                popup_94b0a76b3690813c5663853217ac9527.setContent(html_f0e5a96542f1f67210850e079a57ed18);
+            
+        
+
+        marker_cdb22b12912c0abf2681cb90dcb831a4.bindPopup(popup_94b0a76b3690813c5663853217ac9527)
+        ;
+
+        
+    
+    
+                marker_cdb22b12912c0abf2681cb90dcb831a4.setIcon(icon_b7e02350011bb8bf523c696307c51ae0);
+            
+    
+            var poly_line_24ec6e7fcc93d788f8b1c004d57a0b9c = L.polyline(
+                [[33.68951737900928, 73.08343822185002], [33.52293695870197, 73.13527961994755], [33.2805961517657, 73.29684480368887], [33.12513208722682, 73.42538503399622], [32.86220193540158, 73.56647502099918], [32.66471895603575, 73.60978770474809], [32.51517822979412, 73.77785397699265], [32.315965011919424, 73.86954374265137], [32.07548152305293, 74.02673348527327], [31.960832216906937, 74.10509020534252], [31.676098944886142, 74.25227084173149], [31.549027115941087, 74.37452265878035]],
+                {"bubblingMouseEvents": true, "color": "#fdfb2b", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#fdfb2b", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_7af30c9b9dcef1497ae8fc4c429bc27a);
+        
+    
+            poly_line_24ec6e7fcc93d788f8b1c004d57a0b9c.bindTooltip(
+                `<div>
+                     Flight PK309
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_a7adffb4ce7727dceb70d035fff46cea = L.marker(
+                [33.68951737900928, 73.08343822185002],
+                {
+}
+            ).addTo(map_7af30c9b9dcef1497ae8fc4c429bc27a);
+        
+    
+            var icon_d3442aaca518731d2f7cc81aa0614166 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "plane",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c0bfb21a3cbe80a0d28182309e293020 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8156a0aa0246b1f5fb56bebbd3c989a8 = $(`<div id="html_8156a0aa0246b1f5fb56bebbd3c989a8" style="width: 100.0%; height: 100.0%;">🛫 PK309 (Start)</div>`)[0];
+                popup_c0bfb21a3cbe80a0d28182309e293020.setContent(html_8156a0aa0246b1f5fb56bebbd3c989a8);
+            
+        
+
+        marker_a7adffb4ce7727dceb70d035fff46cea.bindPopup(popup_c0bfb21a3cbe80a0d28182309e293020)
+        ;
+
+        
+    
+    
+                marker_a7adffb4ce7727dceb70d035fff46cea.setIcon(icon_d3442aaca518731d2f7cc81aa0614166);
+            
+    
+            var marker_768e6eed9c5a75f30fc38265bbc39a84 = L.marker(
+                [31.549027115941087, 74.37452265878035],
+                {
+}
+            ).addTo(map_7af30c9b9dcef1497ae8fc4c429bc27a);
+        
+    
+            var icon_0f32848a9dfc545cad965d7c9c0150e1 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "flag",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2e3f6c42ecf16a426d7239daf43e0eca = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_af75c142c86d7ce543507b3653d3dd8b = $(`<div id="html_af75c142c86d7ce543507b3653d3dd8b" style="width: 100.0%; height: 100.0%;">🏁 PK309 (End)</div>`)[0];
+                popup_2e3f6c42ecf16a426d7239daf43e0eca.setContent(html_af75c142c86d7ce543507b3653d3dd8b);
+            
+        
+
+        marker_768e6eed9c5a75f30fc38265bbc39a84.bindPopup(popup_2e3f6c42ecf16a426d7239daf43e0eca)
+        ;
+
+        
+    
+    
+                marker_768e6eed9c5a75f30fc38265bbc39a84.setIcon(icon_0f32848a9dfc545cad965d7c9c0150e1);
+            
+</script>
+</html>
