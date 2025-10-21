@@ -3,9 +3,8 @@ import random
 import time
 from datetime import datetime, timedelta
 
-# ===========================
+
 # CONFIGURATION
-# ===========================
 API_URL = "http://127.0.0.1:5000/api/ingest"
 NUM_FLIGHTS = 10           # how many flights to simulate
 UPDATES_PER_FLIGHT = 12    # how many updates per flight
@@ -25,9 +24,8 @@ def random_airports():
     origin, dest = random.sample(AIRPORTS, 2)
     return origin, dest
 
-# ===========================
+
 # SIMULATION FUNCTION
-# ===========================
 def simulate_flight(flight_id):
     origin, dest = random_airports()
     print(f"🛫 Simulating {flight_id} from {origin[0]} → {dest[0]}")
@@ -60,21 +58,20 @@ def simulate_flight(flight_id):
         try:
             r = requests.post(API_URL, json=payload)
             if r.status_code == 200:
-                print(f"  ✅ Update {step+1}/{UPDATES_PER_FLIGHT}")
+                print(f"Update {step+1}/{UPDATES_PER_FLIGHT}")
             else:
-                print(f"  ⚠️  Failed ({r.status_code}): {r.text}")
+                print(f"Failed ({r.status_code}): {r.text}")
         except Exception as e:
-            print(f"  ❌ Error: {e}")
+            print(f"Error: {e}")
 
         time.sleep(UPDATE_INTERVAL)
 
-    print(f"✅ Flight {flight_id} simulation complete\n")
+    print(f"Flight {flight_id} simulation complete\n")
 
-# ===========================
+
 # MAIN
-# ===========================
 if __name__ == "__main__":
     for i in range(NUM_FLIGHTS):
         flight_id = f"PK{300 + i}"
         simulate_flight(flight_id)
-    print("🎯 Simulation finished for all flights.")
+    print("Simulation finished for all flights.")

@@ -4,23 +4,19 @@ from typing import Optional, List
 from datetime import datetime
 from pymongo import MongoClient
 
-# ===========================
 # DATABASE CONNECTION
-# ===========================
 client = MongoClient("mongodb://localhost:27017/")
 db = client["flightaware_lab"]
 flights_col = db["flights"]
 updates_col = db["flights_updates"]
 logs_col = db["flight_logs"]
 
-# ===========================
+
 # FASTAPI APP
-# ===========================
 app = FastAPI(title="Flight Tracker API", version="1.0")
 
-# ===========================
+
 # SCHEMAS
-# ===========================
 class Position(BaseModel):
     lat: float
     lon: float
@@ -37,15 +33,13 @@ class FlightUpdate(BaseModel):
     heading: int
     speed_kts: Optional[int] = None
 
-# ===========================
-# ROUTES
-# ===========================
 
+# ROUTES
 @app.get("/")
 def root():
     return {"message": "Flight Tracker API is running"}
 
-# 1️⃣ Ingest flight update
+#Ingest flight update
 @app.post("/api/ingest")
 def ingest_update(update: FlightUpdate):
     update_dict = update.dict()
@@ -86,13 +80,13 @@ def ingest_update(update: FlightUpdate):
 
     return {"message": f"Update for flight {update.flight_id} stored successfully"}
 
-# 2️⃣ Get all active flights
+#Get all active flights
 @app.get("/api/active")
 def get_active_flights():
     flights = list(flights_col.find({}, {"_id": 0}))
     return {"active_flights": flights}
 
-# 3️⃣ Track live flight path (updates)
+#Track live flight path (updates)
 @app.get("/api/track/{flight_id}")
 def track_flight(flight_id: str):
     updates = list(updates_col.find({"flight_id": flight_id}, {"_id": 0}).sort("timestamp", 1))
@@ -100,7 +94,7 @@ def track_flight(flight_id: str):
         raise HTTPException(status_code=404, detail="No updates found for this flight")
     return {"flight_id": flight_id, "path": updates}
 
-# 4️⃣ Mark flight complete and move to logs
+#Mark flight complete and move to logs
 @app.post("/api/complete/{flight_id}")
 def complete_flight(flight_id: str):
     updates = list(updates_col.find({"flight_id": flight_id}, {"_id": 0}).sort("timestamp", 1))

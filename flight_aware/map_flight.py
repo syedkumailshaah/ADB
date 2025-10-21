@@ -2,16 +2,16 @@ import folium
 import requests
 import random
 
-# ======== CONFIG =========
+
 BASE_URL = "http://127.0.0.1:5000"
 OUTPUT_FILE = "all_flights_map.html"
-# ==========================
+
 
 def get_active_flights():
     """Fetch all active flights from FastAPI."""
     resp = requests.get(f"{BASE_URL}/api/active")
     if resp.status_code != 200:
-        print("❌ Error fetching active flights:", resp.text)
+        print("Error fetching active flights:", resp.text)
         return []
     data = resp.json().get("active_flights", [])
     return data
@@ -24,16 +24,14 @@ def get_flight_path(flight_id):
     data = resp.json()
     return data.get("path", [])
 
-# ==========================
-# MAIN MAP GENERATION
-# ==========================
 
+# MAIN MAP GENERATION
 flights = get_active_flights()
 if not flights:
-    print("⚠️ No active flights found in database.")
+    print("No active flights found in database.")
     exit()
 
-print(f"🛫 Found {len(flights)} active flights. Generating map...")
+print(f"Found {len(flights)} active flights. Generating map...")
 
 # Center map around first flight (fallback coordinates)
 first_flight = flights[0]
@@ -46,10 +44,10 @@ def random_color():
 
 for flight in flights:
     flight_id = flight["flight_id"]
-    print(f"  ✈️ Plotting {flight_id} ...")
+    print(f"Plotting {flight_id} ...")
     path = get_flight_path(flight_id)
     if not path:
-        print(f"    ⚠️ No path data for {flight_id}. Skipping.")
+        print(f"No path data for {flight_id}. Skipping.")
         continue
 
     color = random_color()
@@ -77,8 +75,7 @@ for flight in flights:
         icon=folium.Icon(color="red", icon="flag", prefix="fa")
     ).add_to(m)
 
-# ==========================
+
 # SAVE OUTPUT
-# ==========================
 m.save(OUTPUT_FILE)
 print(f"Map saved as: {OUTPUT_FILE}")
